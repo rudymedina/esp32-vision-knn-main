@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <title>Neurona de ALSW</title>
+  <!-- p5 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.js"></script>
+  <!-- ml5 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.js" type="text/javascript"></script>
+  <script src="https://unpkg.com/ml5@0.5.0/dist/ml5.min.js" type="text/javascript"></script>
+  <!-- Icon Google-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Materialize -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <!-- Se ve bien movil -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Mi codigo -->
+  <script src="sketch.js"></script>
+  <style>
+    a {
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <div class="container">
+
+    <!-- Cabezera -->
+    <div class="row">
+      <div class="col s12">
+        <div class="card teal darken-1">
+          <div class="card-content white-text">
+            <span class="card-title">Demo detection POTATO</span>
+            <p>Нейрон классификатор изображений реализован в ML5, который может быть обучен из веб-браузера с использованием Адгоритма KNN или K более sercados соседей</p>
+          </div>
+          <div class="card-action  teal darken-4">
+            <a class="white-text" href="https://24fermer.ru/">Дары Малиновки</a>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row z-depth-1 grey lighten-2">
+      <div class="card z-depth-5">
+
+
+        <!-- Bara izquierda -->
+        <div class="col s4 grey lighten-2">
+          <div class="card-panel teal darken-4 center-align">
+            <span class="card-title white-text">Тренировка</span>
+          </div>
+          <div class="section center-align">
+            <h5>Тренировка с кнопками</h5>
+            <div class="center-align">
+              <a class="waves-effect waves-light btn BotonEntrenar">Potato healthy</a>
+              <a class="waves-effect waves-light btn BotonEntrenar">Potato Sick</a>
+              <a class="waves-effect waves-light btn BotonEntrenar">Potato red</a>
+              <a class="waves-effect waves-light btn BotonEntrenar">Potato white</a>
+              <a class="waves-effect waves-light btn BotonEntrenar">land</a>
+            </div>
+          </div>
+          <div class="divider"></div>
+          <div class="section center-align">
+            <h5>Train with TextBox</h5>
+            <div class="input-field">
+              <i class="material-icons prefix">add_circle_outline</i>
+              <input id="TextBox" type="text" data-length="10">
+              <label for="TextBox">the image is:</label>
+            </div>
+            <div class="center-align">
+              <a id="TextBoxBoton" class="waves-effect waves-light btn-large">train with TextBox</a>
+            </div>
+          </div>
+          <div class="divider"></div>
+          <div class="section center-align">
+            <h5>Options Neurona</h5>
+            <div class="center-align">
+              <a id="CargarBoton" class="waves-effect waves-light btn-large">load</a>
+              <a id="SalvarBoton" class="waves-effect waves-light btn-large">Save</a>
+              <a id="LimpiarBoton" class="waves-effect waves-light btn-large">Clean</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col s8 teal darken-4 center-align">
+          <div class="card-panel orange accent-3 center-align">
+            <span id="CartaMensaje" class="card-title">loading...</span>
+          </div>
+          <div id="micanva">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="page-footer teal darken-1">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">Дары Малиновки</h5>
+            <p class="grey-text text-lighten-4">Мы производим и поставляем экологически чистую фермерскую продукцию для жителей современных мегополисов.</p>
+          </div>
+          <div class="col l4 offset-l2 s12">
+            <h5 class="white-text">Link</h5>
+            <ul>
+              <li><a class="grey-text text-lighten-3" href="">Youtube</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright teal darken-3">
+        <div class="container">
+          By
+          <a class="grey-text text-lighten-4 right" href="https://chepecarlos.com/">Дары Малиновки</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+</body>
+
+</html>
